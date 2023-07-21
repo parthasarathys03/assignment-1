@@ -1,0 +1,61 @@
+GET http://localhost:3000/todos/?status=TO%20DO
+
+###
+GET http://localhost:3000/todos/?status=DON
+
+###
+GET http://localhost:3000/todos/?priority=H
+###
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+
+###
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+
+###
+GET http://localhost:3000/todos/?category=HOM
+###
+
+
+###
+GET http://localhost:3000/todos/?search_q=Buy
+###
+GET http://localhost:3000/todos/1/
+
+###
+
+
+GET http://localhost:3000/agenda/?date=2021-01-12
+
+###
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+
+{
+    "id":10,
+    "todo": "Learn node",
+    "priority": "LOW",
+    "status":"TO DO",
+    "category":"LEARNING",
+    "due_date": "2021-04-04"
+}
+
+
+###
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "priority": "HIH"
+}
+###
+
+GET http://localhost:3000/todos/1/
+###
+
+
+DELETE http://localhost:3000/todos/10/
